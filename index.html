@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Quiz Game - API Project</title>
+    <link rel = "stylesheet" href = "main.css">
+</head>
+<body class = "flex">
+    
+    <div class = "wrapper">
+        <div class="registration-form">
+            <h1 id="QuizAppHeader">Quiz App</h1>
+            <h2>User Registration</h2>
+            <form><!--Form tags are used when we are inputing some values-->
+                <label for="username">User Name:</label> <!--label input field ko define krega-->
+                <input type="text" id="username" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" required>
+
+                <label for="category">Category:</label>
+                <select id="category" required> 
+                    <option value="9">General Knowledge</option>
+                    <option value="23">History</option>
+                    <option value="27">Animals</option>
+                    <option value="17">Science and Nature</option> <!--values yeh api se milti hain-->
+                </select>
+        
+                <label for="number-question">Number of Questions:</label>
+                <input type="number" min="5" id="number-question" required>
+        
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" required>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+        
+                <button type="submit">Start Quiz</button>
+            </form>
+        </div>
+        <div class="quiz-container hide">
+            <div class = "quiz-head">
+                <h1 class = "quiz-title">Quiz Game</h1>
+                <div class = "quiz-score flex">
+                    <span id = "correct-score"></span>/<span id = "total-question"></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <span id="countdown" style="font-weight: bold;"></span>
+                </div>
+
+            <div class = "quiz-body">
+                <h2 class = "quiz-question" id = "question"><!--What is the full form of HTTP? --></h2>
+                <div id="timer"></div>
+                <ul class = "quiz-options">
+                    <!-- <li>1. Hyper text transfer package</li>
+                    <li>2. Hyper text transfer protocol</li>
+                    <li>3. Hyphenation text test program</li>
+                    <li>4. None of the above</li> -->
+                </ul>
+                <div id = "result">
+                </div>
+            </div>
+            <div class = "quiz-foot">
+                <button type = "button" id = "check-answer">Check Answer</button>
+                <button type = "button" id = "play-again">Play Again!</button>
+            </div>
+        </div>
+    </div>
+
+
+
+   <script src = "script.js"></script>
+</body>
+</html>
+
